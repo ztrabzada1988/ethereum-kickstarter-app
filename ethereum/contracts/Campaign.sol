@@ -1,6 +1,6 @@
 pragma solidity ^0.4.17;
 
-contract CompaignFactory { // using CompaignFactory we add the level of security so we have control over deployed compaign codes.
+contract CampaignFactory { // using CompaignFactory we add the level of security so we have control over deployed compaign codes.
     address[] public deployedCampaigns;
     
     function createCampaign(uint minimum) public {
@@ -8,7 +8,7 @@ contract CompaignFactory { // using CompaignFactory we add the level of security
         deployedCampaigns.push(newCampaign);
     }
     
-    function getDeployedCompaigns() public view returns (address[]) {
+    function getDeployedCampaigns() public view returns (address[]) {
         return deployedCampaigns;
     }
 }
