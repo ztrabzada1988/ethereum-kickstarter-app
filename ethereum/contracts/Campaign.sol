@@ -24,14 +24,14 @@ contract Campaign {
     }
     
     Request[] public requests; // this is not instance but an idea of struc Request
-    address public manager;
-    uint public minimumContribution;
+    address public manager; 
+    uint public minimumContribution; 
     mapping(address => bool) public approvers; // mapping in constant time but cant store keys or iterate through all value like for loop for arrays            
     uint public approvalCount; // increment value everytime somebody contributes
     
     modifier restricted() {
         require(msg.sender == manager);
-        _; // when restricted modifier is called on any other function, _ will be replace with that funciton
+        _; // when restricted modifier is called on any other function, _ will be replaced with that function
     }
     
     function Campaign(uint minimum, address creator) public {
