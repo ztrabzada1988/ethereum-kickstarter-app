@@ -15,7 +15,7 @@ class CampaignNew extends Component {
     onSubmit = async (event) => {
         event.preventDefault();
 
-        this.setState({ loading: true, errorMessage: '' })
+        this.setState({ loading: true, errorMessage: '' }) // while campaign is being processed, show user spining loading button and clear error message after reloading
 
         try {
             const accounts = await web3.eth.getAccounts();
