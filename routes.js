@@ -1,3 +1,9 @@
 const routes = require('next-routes')(); // the second () means we are requiring a function and gets immediatly invoked
+// see next-routes documentation for above and below codes examples
+
+
+routes
+    .add('/campaigns/new', 'campaigns/new')
+    .add('/campaigns/:address', '/campaigns/show'); // :address is the wildcard or variable or placeholder that will be passed somewhere else
 
 module.exports = routes;
