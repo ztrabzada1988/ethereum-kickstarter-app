@@ -4,6 +4,7 @@ const routes = require('next-routes')(); // the second () means we are requiring
 
 routes
     .add('/campaigns/new', 'campaigns/new')
-    .add('/campaigns/:address', '/campaigns/show'); // :address is the wildcard or variable or placeholder that will be passed somewhere else
+    .add('/campaigns/:address', '/campaigns/show') // :address is the wildcard or variable or placeholder that will be passed somewhere else
+    .add('/campaigns/:address/requests', 'campaigns/requests/index');
 
-module.exports = routes;
+    module.exports = routes;
