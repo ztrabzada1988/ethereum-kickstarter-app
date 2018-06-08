@@ -8,7 +8,7 @@ class RequestIndex extends Component {
     static async getInitialProps(props) {
         const { address } = props.query;
 
-        return { address }
+        return { address };
     }
 
     render() {
