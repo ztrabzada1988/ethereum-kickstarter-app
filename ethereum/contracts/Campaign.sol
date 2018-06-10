@@ -27,7 +27,7 @@ contract Campaign {
     address public manager; 
     uint public minimumContribution; 
     mapping(address => bool) public approvers; // mapping in constant time but cant store keys or iterate through all value like for loop for arrays            
-    uint public approvalCount; // increment value everytime somebody contributes
+    uint public approversCount; // increment value everytime somebody contributes
     
     modifier restricted() {
         require(msg.sender == manager);
@@ -43,7 +43,7 @@ contract Campaign {
         require(msg.value > minimumContribution);
         
         approvers[msg.sender] = true; // checks whether an address has contributed to the Campaign
-        approvalCount++;
+        approversCount++;
     }
     
     function createRequest(string description, uint value, address recipient) public restricted {
@@ -71,7 +71,7 @@ contract Campaign {
     function finalizeRequest(uint index) public restricted {
         Request storage request = requests[index];
         
-        require(request.approvalCount > (approvalCount / 2)); // approvalCount must be more the 50%
+        require(request.approvalCount > (approversCount / 2)); // approvalCount must be more the 50%
         require(!request.complete); // check to make sure this request is not already complete (finalize the same request more than once) 
         
         request.recipient.transfer(request.value); // send the contribution amount
@@ -83,7 +83,7 @@ contract Campaign {
             minimumContribution,
             this.balance,
             requests.length,
-            approvalCount,
+            approversCount,
             manager
         );
     }
