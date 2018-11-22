@@ -4,18 +4,22 @@ import { Link } from '../routes';
 
 export default () => {
     return (
-        <Menu style={{ marginTop: '10px' }}>
+        <Menu style={{ marginTop: '10px', fontSize: '16px', height: '65px', backgroundColor: '#52ff90' }}>
             <Link route="/">
-                <a className="item">CrowdCoin</a>
+                <a style={{ fontWeight: 'bold'}} className="item">CrowdCoin</a>
             </Link>
+
+            <Menu.Menu style={{margin: 'auto', textAlign: 'center'}} position="center">
+                <h3 style= {{ paddingLeft: '150px' }}>Ethereum Kickstarter App</h3> 
+            </Menu.Menu>
 
             <Menu.Menu position="right">
                 <Link route="/">
-                    <a className="item">Campaigns</a>
+                    <a style={{ fontWeight: 'bold'}} className="item">Campaigns</a>
                 </Link>
 
                 <Link route="/campaigns/new">
-                    <a className="item">+</a>
+                    <a style={{ fontWeight: 'bold'}} className="item">+</a>
                 </Link>  
             </Menu.Menu>
         </Menu>

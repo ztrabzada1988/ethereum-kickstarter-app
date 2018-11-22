@@ -80,6 +80,10 @@ class CampaignShow extends Component {
 
                         <Grid.Column width={6}>
                             <ContributeForm address={this.props.address}/>
+                            <h1 style={{color: 'red', fontFamily: 'arial', fontSize: '15px', marginTop: '20px'}}>
+                                NOTE: Please be aware that this application might not fully function if you do not have Metamask and/or Web3 installed. 
+                                If you click "View Request" and an error page shows up, click the browser back button to get to this page
+                            </h1>
                         </Grid.Column>
                     </Grid.Row>
 
