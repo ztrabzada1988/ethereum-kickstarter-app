@@ -4,7 +4,7 @@ import { Link } from '../routes';
 
 export default () => {
     return (
-        <Menu style={{ marginTop: '10px', fontSize: '16px', height: '65px', backgroundColor: '#52ff90' }}>
+        <Menu style={{ marginTop: '20px', fontSize: '16px', height: '65px', backgroundColor: '#52ff90' }}>
             <Link route="/">
                 <a style={{ fontWeight: 'bold'}} className="item">CrowdCoin</a>
             </Link>

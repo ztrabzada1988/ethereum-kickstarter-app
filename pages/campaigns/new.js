@@ -49,9 +49,12 @@ class CampaignNew extends Component {
                             onChange={event => this.setState({ minimumContribution: event.target.value })}
                         />
                     </Form.Field>
-
                     <Message error header="Oops!" content={this.state.errorMessage} />
                     <Button loading={this.state.loading} primary>Create!</Button>
+                    <h1 style={{color: 'red', fontFamily: 'arial', fontSize: '15px', marginTop: '20px'}}>
+                        NOTE: Please be aware that this application might not fully function if you do not have Metamask and/or Web3 installed. 
+                        If you click "View Request" and an error page shows up, click the browser back button to get to this page
+                    </h1>
                 </Form>
             </Layout>
         );
