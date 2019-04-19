@@ -5,10 +5,6 @@ routes
   .add("/campaigns/new", "/campaigns/new")
   .add("/campaigns/:address", "/campaigns/show") // :address is the wildcard or variable or placeholder that will be passed somewhere else
   .add("/campaigns/:address/requests", "/campaigns/requests/index")
-  .add("/campaigns/:address/requests/new", "/campaigns/requests/new")
-
-  // test routes
-  .add("/campaigns/:address/test", "/campaigns/tests/test")
-  .add("/campaigns/:address/test/new", "/campaigns/tests/new");
+  .add("/campaigns/:address/requests/new", "/campaigns/requests/new");
 
 module.exports = routes;
